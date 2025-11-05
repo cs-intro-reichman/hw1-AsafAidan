@@ -1,14 +1,9 @@
-// Prints a given number using a hundreds, tens, and units notation.
 public class NumWords {
 	public static void main(String args[]) {
-	  int hundreds = Integer.parseInt(args[0]);
-	  int tens = Integer.parseInt(args[1]);
-	  int ones = Integer.parseInt(args[2]);
-	  System.out.println(hundreds + " hundreds, " + tens + " tens, and " + ones + " ones.");
-		
-		
-		
-		// 5 hundreds, 1 tens, and 7 ones.
-
+	  int num = Integer.parseInt(args[0]);
+	  int ones = num % 10;
+	  int tens = (num / 10) % 10;
+	  int hundreds = (num /100) % 10; 
+	  System.out.println(hundreds + " hundreds, " + tens + " tens, and " + ones + " ones.");    
 	}
 }
